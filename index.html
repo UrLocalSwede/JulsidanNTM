@@ -82,11 +82,12 @@ function createSnowflake() {
 
   let top = -50;
   const speed = Math.random() * 2 + 1;
+  const documentHeight = document.body.scrollHeight;
 
   function fall() {
     top += speed;
     snowflake.style.top = top + 'px';
-    if(top < window.innerHeight) {
+    if(top < documentHeight) {
       requestAnimationFrame(fall);
     } else {
       snowflake.remove();
