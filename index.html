@@ -100,3 +100,27 @@ function createSnowflake() {
 setInterval(createSnowflake, 200);
 
 </script>
+
+
+<script> // Smooth scroll (Another masterpiece created by Noah). This function didn't work like i wanted it to so its a maybe thing. If u dont like it just remove it.
+
+let lastScroll = 0;
+let velocity = 0;
+const friction = 0.95; 
+const speed = 0.5;
+
+window.addEventListener('wheel', e => {
+    velocity += e.deltaY * 0.15; 
+});
+
+function glideScroll() {
+    if (Math.abs(velocity) > 0.1) {
+        window.scrollBy(0, velocity);
+        velocity *= friction;
+    }
+    requestAnimationFrame(glideScroll);
+}
+
+glideScroll();
+
+</script>
