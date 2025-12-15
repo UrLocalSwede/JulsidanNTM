@@ -6,16 +6,60 @@
     <title>En julig Timeline</title>
     <link rel="stylesheet" href="index.css">
 </head>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">  <!-- Font Link -->
 <body>
     <main>
-        <div class="year box">
-            <div class="left0">
-
+      <div id="snow-container"></div> <!-- Don't touch. It's needed for snow -->
+      <header class="hero"> <h1>The story of christmas</h1> <p>A timeline through history</p> </header>
+        <div class="Timeline">
+          <section class="event">
+            <div class="event-content">
+              <h2>Year 0</h2>
+              <h3>Jesus was born</h3>
+              <p>Jesus was born in Bethlehem, marking the beginning of the Christmas story celebrated around the world today.</p>
+              <img src="images/events/Jesusborn.jpg" alt="">
             </div>
-            <div class="right0">
-
+          <section class="event">
+            <div class="event-content">
+              <h2>Next year / era</h2>
+              <h3>Next header</h3>
+              <p>Next description</p>
+              <img src="images/events/example.jpg" alt="">
             </div>
+          <section class="event">
+
         </div>
     </main>
 </body>
 </html>
+
+<script> /* Snow animation. Created by Noah (Yes hes that good) */
+const snowContainer = document.getElementById('snow-container');
+
+function createSnowflake() {
+  const snowflake = document.createElement('div');
+  snowflake.classList.add('snowflake');
+  snowflake.textContent = '❄';
+  snowflake.style.left = Math.random() * window.innerWidth + 'px';
+  snowflake.style.fontSize = Math.random() * 24 + 12 + 'px';
+  snowContainer.appendChild(snowflake);
+
+  let top = -50;
+  const speed = Math.random() * 2 + 1;
+
+  function fall() {
+    top += speed;
+    snowflake.style.top = top + 'px';
+    if(top < window.innerHeight) {
+      requestAnimationFrame(fall);
+    } else {
+      snowflake.remove();
+    }
+  }
+  fall();
+}
+
+// Create new snowflake every 200ms. Change if you want
+setInterval(createSnowflake, 200);
+
+</script>
