@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>En julig Timeline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">  <!-- Font Link -->
     <link rel="stylesheet" href="index.css">
+
 </head>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">  <!-- Font Link -->
 <body>
     <main>
       <div id="snow-container"></div> <!-- Don't touch. It's needed for snow -->
       <header class="hero"> <h1>The story of christmas</h1> <p>A timeline through history</p> </header>
-        <div class="Timeline">
+
+        <div class="timeline-container">
+
           <section class="event">
             <div class="event-content">
               <h2>Year 0</h2>
@@ -19,21 +22,54 @@
               <p>Jesus was born in Bethlehem, marking the beginning of the Christmas story celebrated around the world today.</p>
               <img src="images/events/Jesusborn.jpg" alt="">
             </div>
+          </section>
+
           <section class="event">
             <div class="event-content">
               <h2>Next year / era</h2>
               <h3>Next header</h3>
               <p>Next description</p>
-              <img src="images/events/example.jpg" alt="">
+              <img src="images/events/example.jpg" alt="Next image">
             </div>
+          </section>
+          <section class="event"></section>
+
           <section class="event">
+            <div class="event-content">
+              <h2>Next year / era</h2>
+              <h3>Next header</h3>
+              <p>Next description</p>
+              <img src="images/events/example.jpg" alt="Next image">
+            </div>
+          </section>
+          <section class="event"></section>
+
+          <section class="event">
+            <div class="event-content">
+              <h2>Next year / era</h2>
+              <h3>Next header</h3>
+              <p>Next description</p>
+              <img src="images/events/example.jpg" alt="Next image">
+            </div>
+          </section>
+          <section class="event"></section>
+
+          <section class="event">
+            <div class="event-content">
+              <h2>Next year / era</h2>
+              <h3>Next header</h3>
+              <p>Next description</p>
+              <img src="images/events/example.jpg" alt="Next image">
+            </div>
+          </section>
+          <section class="event"></section>
 
         </div>
     </main>
 </body>
 </html>
 
-<script> /* Snow animation. Created by Noah (Yes hes that good) */
+<script> // Snow animation. Created by Noah (Yes hes that good)
 const snowContainer = document.getElementById('snow-container');
 
 function createSnowflake() {

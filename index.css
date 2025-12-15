@@ -27,23 +27,48 @@ p {
     line-height: 1.6;
 }
 
-/* Layout for hero section and event content */
+/* Layout for hero section */
 
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 0 20px;
 }
+
+/* timeline CSS */
+.timeline-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 60px;
+}
+
+.event {
+  position: relative;
+  margin-bottom: 100px;
+  padding-left: 50px;
+}
+
 
 .event-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .event-content img {
+  max-width: 100%;
+  height: auto;
   border: 3px solid #D4AF37;
   border-radius: 10px;
+  margin-top: 15px;
 }
 
 /* Snow animation styles */
